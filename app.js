@@ -52,6 +52,7 @@ app.get("/bookmarks/:id", async (req, res) => {
 
   if (!bookmark) {
     res.status(404).json({ error: "BookMark not found" });
+    return;
   }
 
   res.status(200).json(bookmark);
